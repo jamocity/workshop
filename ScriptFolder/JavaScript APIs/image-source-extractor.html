@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Source Extractor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        img {
+            max-width: 300px;
+            margin: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .output {
+            margin-top: 30px;
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 6px;
+        }
+
+   
+  .image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+  }
+  .image-gallery img {
+    width: 220px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+  }
+  .image-gallery img:hover {
+    transform: scale(1.05);
+  }
+
+
+    </style>
+</head>
+<body>
+    <h1>Beautiful Images</h1>
+    
+    <div class="image-gallery">
+  <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="Mountain View">
+  <img src="https://images.unsplash.com/photo-1516117172878-fd2c41f4a759" alt="Beach Sunset">
+  <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="Mountain Landscape">
+  <img src="https://images.unsplash.com/photo-1516117172878-fd2c41f4a759" alt="Laptop Workspace">
+  <img src="https://images.unsplash.com/photo-1523413651479-597eb2da0ad6" alt="City Street">
+  <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Beach Sunset">
+  <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" alt="Code on Screen">
+  <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308" alt="Coffee and Notebook">
+  <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e" alt="Forest Path">
+  <img src="https://images.unsplash.com/photo-1481277542470-605612bd2d61" alt="Bookshelf">
+
+
+ 
+  
+  <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="Mountain Landscape">
+  <img src="https://images.unsplash.com/photo-1516117172878-fd2c41f4a759" alt="Laptop Workspace">
+  <img src="https://images.unsplash.com/photo-1523413651479-597eb2da0ad6" alt="City Street">
+  <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Beach Sunset">
+  <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" alt="Code on Screen">
+  <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308" alt="Coffee and Notebook">
+  <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e" alt="Forest Path">
+  <img src="https://images.unsplash.com/photo-1481277542470-605612bd2d61" alt="Bookshelf">
+
+
+</div>
+
+
+    <div class="output" id="imageSources"></div>
+
+    <script>
+        var imgSet = document.getElementsByTagName("img");
+        var output = "";
+        for (var i = 0; i < imgSet.length; i++) {
+            output += "<p>Source for image " + i + ": " + imgSet[i].src + "</p>";
+        }
+        document.getElementById("imageSources").innerHTML = output;
+    </script>
+</body>
+</html>
