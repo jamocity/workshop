@@ -1,163 +1,90 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Jane Doe - Portfolio</title>
-    <link rel="stylesheet" href="./style.css"/>
-    <script src="./script.js"></script>
-  </head>
-  <body>
-    <!-- Navigation Bar -->
-    <nav>
-      <div id="home">
-        <div class="profile_name">
-          Jane Doe
-          <div class="contact_info">
-            <img src="html_finalprojimages/envelope.png" alt="https://icons8.com/icon/124377/circled-envelope"/>
-          jdoe@jeemail.com
-        </div>
-        <div style="clear:both;"></div>
-        <div class="contact_info">
-          <img src="html_finalprojimages/phone.png" alt="https://icons8.com/icon/124377/circled-envelope"/>
-          +13456764598
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Jamiu Okunlola Portfolio</title>
+	<link rel="stylesheet" href="style.css">
+	<script defer src="script.js"></script>
+</head>
+<body>
+		<header>
+			<div class="site-brand">
+				<div class="site-name">Jamiu Okunlola</div>
+				<button id="menuToggle" class="menu-toggle" aria-label="Toggle navigation">☰</button>
+			</div>
+			<nav id="mainNav" class="main-nav" aria-label="Main navigation">
+				<ul>
+					<li><a href="#about" class="nav-link"><span class="home-icon">🏠</span> Home</a></li>
+					<li><a href="#projects" class="nav-link">Projects</a></li>
+					<li><a href="#skills" class="nav-link">Skills</a></li>
+					<li><a href="#recommendations" class="nav-link">Recommendations</a></li>
+				</ul>
+			</nav>
+		</header>
+	<main>
+		<section id="about">
+			<img src="officeboy2.jpg" alt="Profile Image" class="profile-img">
+			<h1>Jamiu Okunlola</h1>
+			<p>Passionate developer with hands-on experience in web development, automation, and data analysis. Always eager to learn and build impactful solutions.</p>
+		</section>
+		<section id="skills">
+			<h2>Skills</h2>
+			<div class="skills-list">
+				<div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript"><span>JavaScript</span></div>
+				<div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"><span>Python</span></div>
+				<div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML"><span>HTML</span></div>
+				<div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS"><span>CSS</span></div>
+			</div>
+		</section>
+		<section id="projects">
+			<h2>Projects</h2>
+			<div class="projects-list">
+				<div class="project">
+					<h3>Employee Management System</h3>
+					<p>A web app for managing employee records, attendance, and payroll.</p>
+				</div>
+				<div class="project">
+					<h3>Personal Finance Tracker</h3>
+					<p>Helps users track expenses, set budgets, and visualize spending habits.</p>
+				</div>
+				<div class="project">
+					<h3>Automated Data Scraper</h3>
+					<p>Scrapes and analyzes data from multiple sources for research purposes.</p>
+				</div>
+			</div>
+		</section>
+		<section id="recommendations">
+			<h2>Recommendations</h2>
+			<ul id="recommendation-list">
+				<li>Jamiu is a dedicated developer who delivers quality work on time.</li>
+				<li>His problem-solving skills are impressive and reliable.</li>
+				<li>Jamiu's attention to detail makes him a valuable team member.</li>
+			</ul>
+		<form id="recommendation-form">
+			<input type="text" id="new-recommendation" name="new-recommendation" placeholder="Add your recommendation" required aria-label="Add your recommendation">
+			<button type="submit">Submit</button>
+		</form>
+		</section>
+		<!-- Popup Confirmation -->
+		<div id="popup" class="popup" role="dialog" aria-modal="true" aria-hidden="true">
+			<button id="popupClose" class="popup-close" aria-label="Close">✕</button>
+			<img src="popup.png" alt="Confirmation" style="width:60px;height:60px;">
+			<p id="popupMessage">Thank you for leaving a recommendation!</p>
+		</div>
 
-        </div>
-        </div>
-        <div class="topdiv">
-          <a class="topmenu" href="#about-me">About Me</a>
-          <!-- Add the links for Skills, Projects and Recommendation here -->
+		<!-- Scroll to top button -->
+		<button id="scrollTopBtn" class="iconbutton" title="Back to top" aria-label="Back to top">▲</button>
 
-        </div>
-      </div>    
-    </nav>
-
-    <!-- About Me -->
-    <section id="about-me" class="container">
-      <div>
-        <img src="https://miro.medium.com/max/1400/1*qdAW1TjCN57h1lbuuzvchg.gif" class="profile_image"/>
-      </div>
-
-      <div>
-          <h1>
-            Hi, I'm Jane Doe! <img src="html_finalprojimages/waving-hand.png" width="60px"/>
-          </h1>
-          <p>
-            I am a full stack developer with 2 years of experience in both application and presentation layers.
-            I have worked on applications and microservices deployed on IBM Cloud. 
-            I am an avid user of IBM Watson Services and have worked on Watson Assistant, NLU, Sentiment analyzer to name a few.
-          </p>
-      </div>
-    </section>
-              
-    <!-- Skills -->
-    <section id="skills">
-      <h2>Skills</h2>
-      <div style="clear:both;"></div>
-
-      <div class="all_skills">
-        <div class="skill">
-          <img src="html_finalprojimages/html5.png"/>
-          <h6>HTML</h6>
-          <p>2 years experience</p>
-        </div>  
-
-        <div class="skill">
-          <img src="html_finalprojimages/js.jpeg"/>
-          <h6>JavaScript</h6>
-          <p>3 years experience</p>
-        </div>  
-
-        <!-- Add more skills here -->
-
-
-      </div>
-    </section>
-          
-    <!-- Projects -->
-    <section class="projects" id="projects">
-      <h2>
-        Projects
-      </h2>
-      <div style="clear:both;"></div>
-
-        <div id="projects-container" class="projects-container">
-          <div class="project-card">
-            <h3>Chatbot</h3>
-            <ul>
-              <li>Developed a secure website integrated with chatbot for an automobile client using HTML, CSS, JavaScript and IBM Watson Assistant</li>
-            </ul>
-          </div>
-          <hr>
-          <div class="project-card">
-            <h3>Sentiment Analyzer</h3>
-            <ul>
-              <li>Developed and deployed a sentiment analyzer for the box reviews section of an eCommerce platform using IBM NLU</li>
-            </ul>
-          </div>
-          <hr>
-          <div class="project-card">
-            <h3>Fashion Website</h3>
-            <ul>
-              <li>Created a styled multi-page website for a new player in the fashion industry and integrated it with a shopping cart, using stripe for payment gateway</li>
-            </ul>
-          </div>
-    </div>
-    </section>
-    <div style="clear:both;"></div>
-
-    <!-- Recommendations -->
-    <section id="recommendations">
-      <h2>Recommendations</h2>
-      <div style="clear:both;"></div>
-      <div class="all_recommendations" id="all_recommendations">
-        <div class="recommendation">
-          <span>&#8220;</span>
-          Jane is a very quick learner and quickly grasps key concepts of Web development. 
-          She got a great attitude & she is an excellent team player. 
-          She has a curious mind and asks the right question. 
-          She takes initiative within a team and has potentials to lead the team.
-          <span>&#8221;</span>
-        </div>
-        <div class="recommendation">
-          <span>&#8220;</span>
-          Working with Jane has been an awesome experience. 
-          She is highly knowledgable and always goes the extra step to make sure everything is right. 
-          For any future projects that need her expertise I would definitely want to work with her again.
-          <span>&#8221;</span>
-        </div>
-        <div class="recommendation">
-          <span>&#8220;</span>
-          I had worked along with Jane during the initial phase of our venture which needed Web development. 
-          She is a committed resource who has in depth knowledge about the domain. 
-          She will be an asset for any organisation! 
-          <span>&#8221;</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- Recommendation Form -->
-    <section id="contact">
-      <div class="flex_center">
-        <fieldset>
-          <legend class="introduction">Leave a Recommendation</legend>          
-          <input type="text" placeholder="Name (Optional)"> <br/>
-          <textarea id="new_recommendation" cols="500" rows="10" placeholder="Message"></textarea>
-          <div class="flex_center">
-            <button id="recommend_btn" onclick="addRecommendation()">Submit</button>
-          </div>
-        </fieldset>
-      </div>
-    </section>
-
-    <div class="iconbutton">
-      <a href="#home">
-        <!--Add the code here for the logo to appear and the icon to be actionable-->
-      </a>
-    </div>
-
-    <div class="popup" id="popup" class="flex_center">
-      <img src="html_finalprojimages/checkmark--outline.svg"/>
-      <h3><!-- Add appropriate text here--></h3>
-      <button onclick="showPopup(false)">Ok</button>
-    </div>
-  </body>
+		<!-- Project detail modal -->
+		<div id="projectModal" class="modal" aria-hidden="true" role="dialog">
+			<div class="modal-content">
+				<button class="modal-close" id="modalClose" aria-label="Close project details">✕</button>
+				<h3 id="modalTitle">Project Title</h3>
+				<p id="modalDesc">Project description</p>
+			</div>
+		</div>
+	</main>
+</body>
 </html>
+

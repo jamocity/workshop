@@ -1,6 +1,82 @@
-body {
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+:root{
+  --primary: #7600bc;
+  --accent: #4fc3f7;
+  --muted: #f4f4f4;
 }
+
+*{box-sizing:border-box}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  background: var(--muted);
+  color: #222;
+}
+
+header {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background: #222;
+  color: #fff;
+  padding: 0.5em 1em;
+}
+
+.site-brand{display:flex;align-items:center;gap:1rem}
+.site-name{font-size:1.4rem;color:var(--accent);font-weight:700}
+.menu-toggle{background:transparent;border:none;color:#fff;font-size:1.4rem;display:none}
+
+.main-nav ul{list-style:none;margin:0;padding:0;display:flex;gap:1rem}
+.main-nav a{color:#fff;text-decoration:none;padding:0.25rem 0.5rem;border-radius:4px}
+.main-nav a:hover{background:#fff;color:var(--accent);font-weight:600}
+
+main{
+  max-width:1100px;margin:2rem auto;background:#fff;border-radius:8px;box-shadow:0 2px 12px rgba(0,0,0,0.06);padding:2rem
+}
+
+.profile-img{width:140px;height:140px;border-radius:50%;object-fit:cover;border:3px solid var(--accent);display:block;margin:0 auto 1rem}
+#about{text-align:center}
+
+.skills-list{display:flex;gap:1rem;flex-wrap:wrap;justify-content:center}
+.skill{display:flex;align-items:center;gap:.5rem;background:#e3f2fd;padding:.5rem 1rem;border-radius:6px;box-shadow:0 1px 4px rgba(0,0,0,0.04)}
+.skill img{width:28px;height:28px}
+
+.projects-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem}
+.project{background:#fce4ec;padding:1rem;border-radius:8px;box-shadow:0 1px 6px rgba(0,0,0,0.04)}
+.project h3{margin-top:0}
+.project button{margin-top:.5rem;background:var(--primary);color:#fff;border:none;padding:.4rem .6rem;border-radius:6px;cursor:pointer}
+
+#recommendations{margin-top:1.5rem}
+#recommendation-list{margin-bottom:1rem}
+#recommendation-form{display:flex;gap:.75rem}
+#new-recommendation{flex:1;padding:.5rem;border-radius:6px;border:1px solid #ddd}
+#recommendation-form button{background:var(--accent);color:#fff;border:none;border-radius:6px;padding:.5rem 1rem;cursor:pointer}
+
+/* Popup */
+.popup{width:360px;background:linear-gradient(180deg,#e8bcf0,#f7e8fb);border-radius:12px;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;position:fixed;padding:1.25rem;box-shadow:0 8px 30px rgba(118,0,188,0.25);visibility:hidden;z-index:1200}
+.popup[aria-hidden="false"]{visibility:visible}
+.popup img{width:64px;height:64px}
+.popup-close{position:absolute;right:8px;top:8px;background:transparent;border:none;font-size:1.1rem}
+
+/* Scroll to top */
+.iconbutton{width:48px;height:48px;border-radius:50%;background:var(--primary);display:flex;align-items:center;justify-content:center;position:fixed;right:2.5%;bottom:3%;cursor:pointer;color:#fff;border:none}
+
+/* Modal */
+.modal{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.4);visibility:hidden;opacity:0;transition:opacity .2s}
+.modal[aria-hidden="false"]{visibility:visible;opacity:1}
+.modal-content{background:#fff;padding:1.25rem;border-radius:8px;max-width:720px;width:90%;position:relative}
+.modal-close{position:absolute;right:10px;top:10px;border:none;background:transparent;font-size:1.1rem}
+
+/* Responsive */
+@media (max-width:700px){
+  .menu-toggle{display:inline-block}
+  .main-nav{display:none}
+  .main-nav.open{display:block;background:#222;padding:1rem;position:absolute;left:0;right:0;top:56px}
+  .main-nav ul{flex-direction:column;gap:.5rem}
+  main{margin:1rem}
+}
+
+/* Keep other custom styles present later in the file but cleaned up */
 
 /* Navigation Bar */
 
